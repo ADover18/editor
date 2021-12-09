@@ -39,4 +39,14 @@ public:
         );
     }
 
+    void search(std::string term){
+        for (int i = 0 ; i < this->get_length(); ++i ){
+            std::string line = this->get_line(i);
+            if (line.find(term) != std::string::npos) {
+                ++i;
+                std::cout << std::to_string(i) << " " << line;
+            }
+        }
+    }
+
 } text_buffer;

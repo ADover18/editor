@@ -53,6 +53,10 @@ int main(int argc, char *argv[]){
             }
             getline(cin, input);
             text_buffer.set_line_idx(input, idx);
+        } else if (input == "s"){
+            cout << "Enter search term\n";
+            getline(cin, input);
+            text_buffer.search(input);
         } else if (input != "."){
           text_buffer.set_line(input);
         }
